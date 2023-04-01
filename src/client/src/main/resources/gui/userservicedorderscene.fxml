@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserServicedOrderSceneController">
+   <children>
+      <Text layoutX="403.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="История заказов">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Button layoutX="21.0" layoutY="465.0" mnemonicParsing="false" onAction="#exitToUserOrderScene" prefHeight="26.0" prefWidth="81.0" text="Назад" />
+      <TableView fx:id="servicedOrderTableView" layoutX="19.0" layoutY="104.0" prefHeight="338.0" prefWidth="522.0" AnchorPane.topAnchor="104.0">
+        <columns>
+          <TableColumn fx:id="orderNumberColumn" prefWidth="90.93335342407227" text="Номер заказа" />
+          <TableColumn fx:id="orderAssistantColumn" prefWidth="144.26663970947266" text="Менеджер" />
+            <TableColumn fx:id="orderAcceptedColumn" prefWidth="75.0" text="Состояние" />
+            <TableColumn fx:id="orderDateAnswerColumn" prefWidth="75.0" text="Дата ответа" />
+            <TableColumn fx:id="orderDateOrderColumn" prefWidth="75.0" text="Дата заказа" />
+            <TableColumn fx:id="orderPriceColumn" prefWidth="75.0" text="Цена заказа" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane fx:id="servicedOrderDescriptionPane" layoutX="565.0" layoutY="99.0" prefHeight="342.0" prefWidth="379.0" AnchorPane.topAnchor="104.0">
+         <children>
+            <TableView fx:id="servicedOrderElementsTableView" prefHeight="200.0" prefWidth="379.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="orderElementNameColumn" prefWidth="75.0" text="Наименование" />
+                <TableColumn fx:id="orderElementPriceColumn" prefWidth="75.0" text="Стоимость" />
+                  <TableColumn fx:id="orderElementAmountColumn" prefWidth="75.0" text="Количество в заказе" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text layoutX="168.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ответ" wrappingWidth="43.8668212890625">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="orderDescriptionArea" editable="false" layoutX="1.0" layoutY="230.0" prefHeight="108.0" prefWidth="379.0" promptText="Описание отсутсвует" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserCartSceneController">
+   <children>
+      <AnchorPane fx:id="furnitureFullDescription" layoutX="460.0" layoutY="39.0" prefHeight="499.0" prefWidth="493.0">
+         <children>
+            <VBox layoutX="47.0" layoutY="40.0" prefHeight="346.0" prefWidth="413.0" spacing="15.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Название:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureNameText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НазваниеОтвет">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Производитель:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureManufactorerText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПроизводительОтвет">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Гарантия:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureWarrantyText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ГарантияОтвет" wrappingWidth="150.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Стоимость:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furniturePriceText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="СтоимостьОтвет" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="113.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Количество в корзине:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureAmountText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КоличествоОтвет" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Описание:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="furnitureDescriptionArea" editable="false" focusTraversable="false" prefHeight="116.0" prefWidth="483.0" promptText="Описание отсутствует" />
+               </children>
+            </VBox>
+            <Button layoutX="51.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteFromCart" text="Удалить из корзины" />
+            <Button layoutX="325.0" layoutY="414.0" mnemonicParsing="false" onAction="#changeCartElementAmount" text="Изменить количество" />
+            <TextField fx:id="fieldAmountToChange" layoutX="393.0" layoutY="385.0" prefHeight="26.0" prefWidth="65.0" />
+            <Text fx:id="amountCheckWarning" fill="RED" layoutX="319.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество верно!" visible="false" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="cartelementsTable" layoutX="27.0" layoutY="71.0" prefHeight="348.0" prefWidth="451.0">
+        <columns>
+          <TableColumn fx:id="cartTableName" prefWidth="141.86669540405273" text="Наименование" />
+            <TableColumn fx:id="cartTableAmount" prefWidth="91.99996948242188" text="Количество" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Text layoutX="416.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корзина">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="16.0" layoutY="457.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefWidth="83.0" text="Назад" />
+      <Button layoutX="363.0" layoutY="456.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="26.0" prefWidth="116.0" text="Оформить заказ" />
+      <Text fx:id="cartelementlistEmptyWarning" fill="RED" layoutX="381.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корзина пуста!" visible="false" />
+      <Button layoutX="228.0" layoutY="456.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="26.0" prefWidth="116.0" text="Очистить корзину" />
+   </children>
+</AnchorPane>

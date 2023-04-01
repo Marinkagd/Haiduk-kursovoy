@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserStartSceneController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToUserInformation" prefWidth="240.0" text="Аккаунт" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToOrderScene" prefWidth="249.0" text="Заказы" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToCartScene" prefWidth="240.0" text="Корзина" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToStartScene" prefWidth="240.0" text="Выйти" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <HBox prefHeight="514.0" prefWidth="522.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="508.0" prefWidth="153.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Фильрация">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="filterWarning" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Предупреждение" visible="false" />
+                  <Text layoutX="52.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название:" />
+                  <TextField fx:id="filterName" focusTraversable="false" prefWidth="140.0" promptText="Название">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Цена:">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER" prefWidth="140.0">
+                     <children>
+                        <TextField fx:id="filterPriceFrom" focusTraversable="false" prefWidth="70.0" promptText="От" />
+                        <TextField fx:id="filterPriceTo" focusTraversable="false" prefWidth="70.0" promptText="До" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Категория" />
+                  <ChoiceBox fx:id="filterCategory" focusTraversable="false" prefHeight="26.0" prefWidth="140.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Гарантия:" />
+                  <HBox alignment="CENTER" prefWidth="140.0">
+                     <children>
+                        <TextField fx:id="filterWarrantyFrom" focusTraversable="false" prefWidth="70.0" promptText="От" />
+                        <TextField fx:id="filterWarrantyTo" focusTraversable="false" prefWidth="70.0" promptText="До" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#applyFilters" prefWidth="140.0" text="Применить">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#freeFilters" prefWidth="140.0" text="Сбросить">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="514.0" prefWidth="370.0">
+               <children>
+                  <TableView fx:id="mainFurnitureViewTable" focusTraversable="false" prefHeight="514.0" prefWidth="218.0">
+                    <columns>
+                      <TableColumn fx:id="furnitureColumnName" prefWidth="126.13328248262405" text="Название" />
+                      <TableColumn fx:id="furnitureColumnManufactorer" prefWidth="152.26661682128906" text="Производитель" />
+                        <TableColumn fx:id="furnitureColumnPrice" prefWidth="78.13345336914062" text="Цена" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="CENTER" spacing="10.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <AnchorPane fx:id="furnitureFullDescription" prefHeight="514.0" prefWidth="468.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="143.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Подробная информация:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <VBox layoutX="20.0" layoutY="122.0" prefHeight="310.0" prefWidth="391.0" spacing="15.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Название:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureNameText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НазваниеОтвет">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Производитель:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureManufactorerText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПроизводительОтвет">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Гарантия:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furnitureWarrantyText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ГарантияОтвет" wrappingWidth="150.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Стоимость:" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="furniturePriceText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="СтоимостьОтвет" wrappingWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Описание:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="furnitureDescriptionArea" editable="false" focusTraversable="false" prefHeight="116.0" prefWidth="400.0" promptText="Описание отсутствует" />
+               </children>
+            </VBox>
+            <Button layoutX="161.0" layoutY="437.0" mnemonicParsing="false" onAction="#addCartElement" text="Добавить в корзину" />
+            <Text fx:id="alreadyInCart" fill="#056902" layoutX="166.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Товар уже в корзине!" visible="false" wrappingWidth="160.53675079345703" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+</BorderPane>

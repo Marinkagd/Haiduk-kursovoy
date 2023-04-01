@@ -1,0 +1,14 @@
+package request.commands;
+
+public enum AdminCommands {
+    GET_USER_LIST,
+    GET_ASSISTANT_LIST,
+    DELETE_USER,
+    DELETE_ASSISTANT,
+    ADD_ASSISTANT,
+    GET_FULL_PROFIT,
+    GET_PROFIT_PER_PERIOD,
+    GET_ANALYSIS_PER_MONTH,
+    GET_ANALYSIS_PER_YEAR,
+    EXIT
+}

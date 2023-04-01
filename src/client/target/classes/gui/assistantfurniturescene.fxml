@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AssistantFurnitureSceneController">
+   <children>
+      <Text layoutX="420.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Склад товаров">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="mainFurnitureTableView" layoutX="15.0" layoutY="82.0" prefHeight="354.0" prefWidth="625.0">
+        <columns>
+          <TableColumn fx:id="furnitureCategoryColumn" prefWidth="91.7333173751831" text="Категория" />
+          <TableColumn fx:id="furniturenNameColumn" prefWidth="104.26668548583984" text="Название" />
+            <TableColumn fx:id="furniturenManufactorerColumn" prefWidth="143.73336791992188" text="Производитель" />
+            <TableColumn fx:id="furniturenWarrantyColumn" prefWidth="85.0" text="Гарантия" />
+            <TableColumn fx:id="furniturenPriceColumn" prefWidth="85.0" text="Цена" />
+            <TableColumn fx:id="furniturenFirscostColumn" prefWidth="94.13330078125" text="Себестоимость" />
+            <TableColumn fx:id="furniturenStogeAmountColumn" prefWidth="87.46673583984375" text="Склад" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="14.0" layoutY="497.0" mnemonicParsing="false" onAction="#exitToAssistantStartScene" prefHeight="26.0" prefWidth="113.0" text="Вернуться назад" />
+      <AnchorPane fx:id="furnitureDescriptionPane" layoutX="641.0" layoutY="2.0" prefHeight="540.0" prefWidth="307.0">
+         <children>
+            <Text fx:id="descriptionAddText" layoutX="120.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="59.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название:" />
+            <TextField fx:id="furnitureDescriptionName" layoutX="57.0" layoutY="50.0" prefHeight="26.0" prefWidth="194.0" promptText="Название">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Text layoutX="59.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Категория:" />
+            <ChoiceBox fx:id="categoryChoiceBox" layoutX="57.0" layoutY="97.0" prefHeight="26.0" prefWidth="194.0" />
+            <Text layoutX="59.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Производитель:" />
+            <TextField fx:id="furnitureDescriptionManufactorer" layoutX="57.0" layoutY="143.0" prefHeight="26.0" prefWidth="194.0" promptText="Производитель" />
+            <Text layoutX="59.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание:" />
+            <TextArea fx:id="furnitureDescriptionArea" layoutX="16.0" layoutY="195.0" prefHeight="80.0" prefWidth="272.0" promptText="Описание отсутсвтует" />
+            <Text layoutX="59.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Гарантия:" />
+            <TextField fx:id="furnitureDescriptionWarranty" layoutX="59.0" layoutY="295.0" prefHeight="26.0" prefWidth="194.0" promptText="Гарантия" />
+            <Text layoutX="59.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена:" />
+            <TextField fx:id="furnitureDescriptionPrice" layoutX="59.0" layoutY="350.0" prefHeight="26.0" prefWidth="194.0" promptText="Цена" />
+            <Text layoutX="59.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Себестоимость:" />
+            <TextField fx:id="furnitureDescriptionFirstcost" layoutX="59.0" layoutY="401.0" prefHeight="26.0" prefWidth="194.0" promptText="Себестоимость" />
+            <Text layoutX="59.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество на складе:" />
+            <TextField fx:id="furnitureDescriptionAmount" layoutX="59.0" layoutY="454.0" prefHeight="26.0" prefWidth="194.0" promptText="Количество на складе" />
+            <Button fx:id="deleteCancelButton" layoutX="-2.0" layoutY="494.0" mnemonicParsing="false" onAction="#deleteFurniture" prefHeight="26.0" prefWidth="143.0" text="Удалить товар" />
+            <Button fx:id="applyAddButton" layoutX="164.0" layoutY="493.0" mnemonicParsing="false" onAction="#applyFurnitureChanges" prefHeight="26.0" prefWidth="143.0" text="Применить изменения" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="271.0" layoutY="444.0" mnemonicParsing="false" onAction="#RefreshFurnitureTable" prefHeight="26.0" prefWidth="113.0" text="Обновить список" />
+      <Button fx:id="addButton" layoutX="528.0" layoutY="444.0" mnemonicParsing="false" onAction="#buttonAddFurniture" prefHeight="26.0" prefWidth="113.0" text="Добавить" />
+   </children>
+</AnchorPane>

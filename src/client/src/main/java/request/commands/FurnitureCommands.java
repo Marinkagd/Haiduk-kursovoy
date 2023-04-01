@@ -1,0 +1,8 @@
+package request.commands;
+
+public enum FurnitureCommands {
+    GET_FURNITURE_LIST_ASSISTANT,
+    GET_FURNITURE_LIST_USER,
+    GET_FURNITURE_CATEGORY_ASSISTANT,
+    GET_FURNITURE_CATEGORY_USER,
+}

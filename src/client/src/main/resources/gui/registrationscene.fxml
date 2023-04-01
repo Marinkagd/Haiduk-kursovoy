@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.RegistrationSceneController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="МЕБЕЛЬНЫЙ САЛОН" textAlignment="CENTER">
+               <font>
+                  <Font name="Yandex Sans Display Bold" size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация пользователя">
+               <font>
+                  <Font name="Yandex Sans Display Regular" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="warning" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Предупреждение" visible="false">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="login" focusTraversable="false" prefHeight="30.0" prefWidth="0.0" promptText="Имя пользоваетеля">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="password" focusTraversable="false" prefHeight="30.0" promptText="Пароль">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </PasswordField>
+            <TextField fx:id="firstname" focusTraversable="false" layoutX="380.0" layoutY="168.0" prefHeight="30.0" prefWidth="0.0" promptText="Имя">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="secondname" focusTraversable="false" layoutX="380.0" layoutY="250.0" prefHeight="30.0" prefWidth="0.0" promptText="Фамилия">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="phonenumber" focusTraversable="false" layoutX="10.0" layoutY="291.0" prefHeight="30.0" prefWidth="0.0" promptText="Номер телефона (Необязательно)">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="email" focusTraversable="false" layoutX="380.0" layoutY="250.0" prefHeight="30.0" prefWidth="0.0" promptText="Электронная почта">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="address" focusTraversable="false" layoutX="380.0" layoutY="250.0" prefHeight="30.0" prefWidth="0.0" promptText="Адрес (Необязательно)">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="370.0" right="370.0" />
+               </VBox.margin>
+            </TextField>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#Registration" prefHeight="26.0" prefWidth="221.0" text="Зарегистрироваться" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Уже есть аккаунт?">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <Text fill="#1557ef" onMouseClicked="#SwitchToStartScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Войти">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

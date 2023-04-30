@@ -1,7 +1,7 @@
 package request.tdo.constructors;
 
-import menu.db.entity.Furniture;
-import menu.db.entity.FurnitureCategory;
+import db.entity.Furniture;
+import db.entity.FurnitureCategory;
 import request.tdo.FurnitureCategoryTDO;
 import request.tdo.FurnitureTDO;
 

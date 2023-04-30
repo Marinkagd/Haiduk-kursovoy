@@ -1,10 +1,11 @@
 package db.dao;
 
-import db.entity.User;
-import jakarta.persistence.criteria.CriteriaDelete;
+import java.util.List;
+
 import org.hibernate.Session;
 
-import java.util.List;
+import db.entity.User;
+import jakarta.persistence.criteria.CriteriaDelete;
 
 public class UserRefersDao<T> extends GenericDao<T> {
 
@@ -12,7 +13,7 @@ public class UserRefersDao<T> extends GenericDao<T> {
         super(entityType);
     }
 
-    public List<T> getElementsRefersToUser(User user) {
+    public List<T> getElementsRefersToUser(User user){
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
             criteriaQuery = cBuilder.createQuery(entityType);
@@ -27,7 +28,8 @@ public class UserRefersDao<T> extends GenericDao<T> {
         }
     }
 
-    public void removeElementsRefersToUser(User user) {
+    public void removeElementsRefersToUser(User user)
+    {
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
             CriteriaDelete<T> criteriaDelete = cBuilder.createCriteriaDelete(entityType);
@@ -35,8 +37,8 @@ public class UserRefersDao<T> extends GenericDao<T> {
             criteriaDelete.where(cBuilder.equal(root.get("user"), user.getId()));
 
             session.beginTransaction();
-            session.createMutationQuery(criteriaDelete).executeUpdate();
-            session.getTransaction().commit();
+            session.createMutationQuery(criteriaDelete).executeUpdate();  
+            session.getTransaction().commit();          
         } catch (Exception e) {
             e.printStackTrace();
             return;

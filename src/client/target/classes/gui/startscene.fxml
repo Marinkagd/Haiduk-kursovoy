@@ -13,14 +13,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.StartSceneController">
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFE4E1;" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="МЕБЕЛЬНЫЙ САЛОН" textAlignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="САЛОН МЕБЕЛИ" textAlignment="CENTER" wrappingWidth="217.12060546875">
                <font>
-                  <Font name="Yandex Sans Display Bold" size="23.0" />
+                  <Font name="System Bold" size="27.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="15.0" />
@@ -31,7 +30,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </Text>
-            <TextField fx:id="login" focusTraversable="false" prefHeight="30.0" prefWidth="0.0" promptText="Имя пользоваетеля">
+            <TextField fx:id="login" focusTraversable="false" prefHeight="30.0" prefWidth="0.0" promptText="Имя пользователя">
                <VBox.margin>
                   <Insets bottom="10.0" left="370.0" right="370.0" />
                </VBox.margin>
@@ -66,7 +65,10 @@
                   <Insets bottom="15.0" />
                </padding>
             </HBox>
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#Authorisation" prefHeight="26.0" prefWidth="220.0" text="Войти" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#Authorisation" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #BC8F8F;" text="Войти" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="У вас ещё нет аккаунта? " textAlignment="CENTER">
                <font>
                   <Font size="14.0" />

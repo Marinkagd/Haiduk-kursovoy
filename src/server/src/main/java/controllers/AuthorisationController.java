@@ -2,10 +2,10 @@ package controllers;
 
 import java.io.IOException;
 import java.security.MessageDigest;
-import menu.db.dao.AccountDao;
-import menu.db.entity.Admin;
-import menu.db.entity.Assistant;
-import menu.db.entity.User;
+import db.dao.AccountDao;
+import db.entity.Admin;
+import db.entity.Assistant;
+import db.entity.User;
 import request.commands.ConfirmCommands;
 import request.controller.BaseRequestController;
 import request.tdo.AuthorisationTDO;

@@ -2,7 +2,7 @@ package menu;
 
 import controllers.FurnitureController;
 import controllers.OrderController;
-import menu.db.entity.Assistant;
+import db.entity.Assistant;
 import request.commands.AssistantCommands;
 import request.controller.BaseRequestController;
 

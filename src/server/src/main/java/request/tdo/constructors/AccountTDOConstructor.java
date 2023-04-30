@@ -1,8 +1,8 @@
 package request.tdo.constructors;
 
-import menu.db.entity.Admin;
-import menu.db.entity.Assistant;
-import menu.db.entity.User;
+import db.entity.Admin;
+import db.entity.Assistant;
+import db.entity.User;
 import request.tdo.AdminTDO;
 import request.tdo.AssistantTDO;
 import request.tdo.UserTDO;

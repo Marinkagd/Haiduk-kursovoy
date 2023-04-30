@@ -2,9 +2,9 @@ package menu;
 
 import controllers.AccountController;
 import controllers.FinanceController;
-import menu.db.entity.Admin;
-import menu.db.entity.Assistant;
-import menu.db.entity.User;
+import db.entity.Admin;
+import db.entity.Assistant;
+import db.entity.User;
 import request.commands.AdminCommands;
 import request.controller.BaseRequestController;
 

@@ -1,30 +1,31 @@
 package db.dao;
 
-import db.connection.DBConnection;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import java.util.List;
+import db.connection.DBConnection;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 
-public class GenericDao<T> implements IDao<T> {
+public class GenericDao<T> implements IDao<T>{
     protected SessionFactory sessionFactory;
     protected final Class<T> entityType;
     protected CriteriaBuilder cBuilder;
     protected CriteriaQuery<T> criteriaQuery;
     protected Root<T> root;
 
-    public GenericDao(Class<T> entityType) {
+    public GenericDao(Class<T> entityType){
         sessionFactory = DBConnection.GetSessionFactory();
         this.entityType = entityType;
     }
 
     @Override
     public List<T> getAll() {
-        List<T> entityList = null;
+        List<T> entityList= null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
             criteriaQuery = cBuilder.createQuery(entityType);
@@ -34,7 +35,7 @@ public class GenericDao<T> implements IDao<T> {
         } catch (Exception e) {
             e.printStackTrace();
             return entityList;
-        }
+        } 
         return entityList;
     }
 
@@ -101,5 +102,5 @@ public class GenericDao<T> implements IDao<T> {
             return null;
         }
     }
-
+    
 }

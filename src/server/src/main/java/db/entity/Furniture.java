@@ -1,6 +1,13 @@
 package db.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import request.tdo.FurnitureTDO;
 
 @Entity
@@ -14,7 +21,7 @@ public class Furniture {
     // @Column(name = "furniturecategory", nullable = false)
     // private int furniturecategory;
     @ManyToOne
-    @JoinColumn(name = "furniturecategory", nullable = false)
+    @JoinColumn(name="furniturecategory", nullable=false)
     private FurnitureCategory furniturecategory;
 
     @Column(name = "name", nullable = false, length = 45)
@@ -38,11 +45,10 @@ public class Furniture {
     @Column(name = "amount", nullable = true)
     private int amount;
 
-    public Furniture() {
-    }
+    public Furniture(){}
 
     public Furniture(FurnitureCategory furniturecategory, String name, String manufactorer, String description, int warranty,
-                     float price, float firstcost, int amount) {
+            float price, float firstcost, int amount) {
         this.furniturecategory = furniturecategory;
         this.name = name;
         this.manufactorer = manufactorer;
@@ -53,7 +59,8 @@ public class Furniture {
         this.amount = amount;
     }
 
-    public Furniture(FurnitureTDO furnitureTDO, FurnitureCategory furniturecategory) {
+    public Furniture(FurnitureTDO furnitureTDO, FurnitureCategory furniturecategory)
+    {
         this.id = furnitureTDO.getId();
         this.furniturecategory = furniturecategory;
         this.name = furnitureTDO.getName();

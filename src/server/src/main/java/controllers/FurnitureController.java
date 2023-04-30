@@ -3,11 +3,11 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import menu.db.dao.FurnitureCategoryDao;
-import menu.db.dao.FurnitureDao;
-import menu.db.dao.GenericDao;
-import menu.db.entity.Furniture;
-import menu.db.entity.FurnitureCategory;
+import db.dao.FurnitureCategoryDao;
+import db.dao.FurnitureDao;
+import db.dao.GenericDao;
+import db.entity.Furniture;
+import db.entity.FurnitureCategory;
 import request.commands.ConfirmCommands;
 import request.controller.BaseRequestController;
 import request.tdo.FurnitureCategoryTDO;

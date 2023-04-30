@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserOrderSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserOrderSceneController">
    <children>
-      <Text layoutX="391.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Активные заказы">
+      <Text layoutX="390.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Активные заказы">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <TableView fx:id="activeOrderTableView" layoutX="19.0" layoutY="116.0" prefHeight="311.0" prefWidth="364.0">
+      <TableView fx:id="activeOrderTableView" layoutX="19.0" layoutY="93.0" prefHeight="334.0" prefWidth="394.0">
         <columns>
           <TableColumn fx:id="orderNumberColumn" prefWidth="75.0" text="Номер заказа" />
           <TableColumn fx:id="orderDateColumn" prefWidth="75.0" text="Дата заказа" />
@@ -26,12 +26,7 @@
       </TableView>
       <AnchorPane fx:id="orderDescriptionPane" layoutX="412.0" layoutY="64.0" prefHeight="462.0" prefWidth="527.0">
          <children>
-            <Text layoutX="204.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Товары заказа">
-               <font>
-                  <Font name="System Bold" size="19.0" />
-               </font>
-            </Text>
-            <TableView fx:id="orderElementsTableView" layoutX="68.0" layoutY="52.0" prefHeight="309.0" prefWidth="403.0">
+            <TableView fx:id="orderElementsTableView" layoutX="68.0" layoutY="28.0" prefHeight="334.0" prefWidth="403.0">
               <columns>
                 <TableColumn fx:id="orderElementNameColumn" prefWidth="75.0" text="Наименование" />
                 <TableColumn fx:id="orderElementPriceColumn" prefWidth="75.0" text="Стоимость" />
@@ -41,10 +36,19 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button layoutX="224.0" layoutY="386.0" mnemonicParsing="false" onAction="#deleteUserOrder" text="Отменить заказ" />
+            <Button layoutX="178.0" layoutY="404.0" mnemonicParsing="false" onAction="#deleteUserOrder" prefHeight="30.0" prefWidth="194.0" style="-fx-background-color: #BC8F8F;" text="Отменить заказ" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
          </children>
       </AnchorPane>
-      <Button layoutX="18.0" layoutY="466.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefHeight="26.0" prefWidth="58.0" text="Назад" />
-      <Button layoutX="269.0" layoutY="466.0" mnemonicParsing="false" onAction="#exitToServicedOrderScene" prefHeight="26.0" prefWidth="114.0" text="История заказов" />
+      <Button layoutX="18.0" layoutY="466.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #BC8F8F;" text="&lt;-Назад" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="268.0" layoutY="466.0" mnemonicParsing="false" onAction="#exitToServicedOrderScene" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #BC8F8F;" text="История заказов" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

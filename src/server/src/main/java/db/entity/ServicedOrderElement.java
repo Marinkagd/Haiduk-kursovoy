@@ -1,6 +1,11 @@
 package db.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import request.tdo.OrderElementTDO;
 
 @Entity
@@ -27,8 +32,7 @@ public class ServicedOrderElement {
         this.amount = amount;
     }
 
-    public ServicedOrderElement() {
-    }
+    public ServicedOrderElement() {}
 
     public ServicedOrderElement(ServicedOrder servicedorder, OrderElement orderElement) {
         this.id = orderElement.getId();
@@ -37,7 +41,8 @@ public class ServicedOrderElement {
         this.servicedorder = servicedorder;
     }
 
-    public ServicedOrderElement(ServicedOrder servicedOrder, OrderElementTDO orderElementTDO, Furniture furniture) {
+    public ServicedOrderElement(ServicedOrder servicedOrder, OrderElementTDO orderElementTDO, Furniture furniture)
+    {
         this.id = orderElementTDO.getId();
         this.servicedorder = servicedOrder;
         this.furniture = furniture;

@@ -1,16 +1,22 @@
 package db.entity;
 
-import jakarta.persistence.*;
-import request.tdo.OrderAnswerTDO;
-import request.tdo.UserOrderTDO;
-
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import request.tdo.OrderAnswerTDO;
+import request.tdo.UserOrderTDO;
+
 @Entity
 @Table(name = "servicedorder")
-public class ServicedOrder {
+public class ServicedOrder{
     @Id
     @Column(name = "id", nullable = false, unique = true)
     private int id;
@@ -44,15 +50,14 @@ public class ServicedOrder {
 
     @Column(name = "orderfirstcost", nullable = false)
     private float orderfirstcost;
-
+  
     @OneToMany(mappedBy = "servicedorder", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ServicedOrderElement> servicedorderelementlist;
 
-    public ServicedOrder() {
-    }
-
+    public ServicedOrder() {}
+    
     public ServicedOrder(String user, String assistant, String description, int isaccepted, Date orderdate,
-                         Date answerdate, float orderprice, float orderfirstcost) {
+            Date answerdate, float orderprice, float orderfirstcost) {
         this.user = user;
         this.assistant = assistant;
         this.description = description;
@@ -63,7 +68,8 @@ public class ServicedOrder {
         this.orderfirstcost = orderfirstcost;
     }
 
-    public ServicedOrder(UserOrder userOrder, String assistant, String despcription, int isaccepted) {
+    public ServicedOrder(UserOrder userOrder, String assistant, String despcription, int isaccepted)
+    {
         this.id = userOrder.getId();
         this.user = userOrder.getUser();
         this.assistant = assistant;
@@ -77,7 +83,8 @@ public class ServicedOrder {
         }
     }
 
-    public ServicedOrder(OrderAnswerTDO orderAnswer, String assistant) {
+    public ServicedOrder(OrderAnswerTDO orderAnswer, String assistant)
+    {
         UserOrderTDO userOrder = orderAnswer.getUserOrderTDO();
         this.id = userOrder.getId();
         this.user = userOrder.getUser();
@@ -161,7 +168,7 @@ public class ServicedOrder {
     public void setOrderprice(float orderprice) {
         this.orderprice = orderprice;
     }
-
+ 
     public float getOrderfirstcost() {
         return orderfirstcost;
     }

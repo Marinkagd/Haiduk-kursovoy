@@ -1,7 +1,7 @@
 package controllers;
 
-import menu.db.dao.GenericDao;
-import menu.db.entity.User;
+import db.dao.GenericDao;
+import db.entity.User;
 import request.commands.ConfirmCommands;
 import request.controller.BaseRequestController;
 import request.tdo.UserTDO;

@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "admin")
-public class Admin {
+public class Admin{
     @Id
     @Column(name = "id", nullable = false, unique = true)
     private String id;
@@ -19,8 +19,7 @@ public class Admin {
         this.password = password;
     }
 
-    public Admin() {
-    }
+    public Admin(){}
 
     public String getId() {
         return id;
@@ -31,11 +30,11 @@ public class Admin {
         this.id = id;
     }
 
-    public byte[] getPassword() {
+    public byte[]  getPassword() {
         return password;
     }
 
-    public void setPassword(byte[] password) {
+    public void setPassword(byte[]  password) {
         this.password = password;
     }
 

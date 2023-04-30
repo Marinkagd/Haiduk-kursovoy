@@ -6,7 +6,7 @@ import static org.junit.Assert.fail;
 import org.hibernate.HibernateException;
 import org.junit.Test;
 
-import menu.db.connection.DBConnection;
+import db.connection.DBConnection;
 
 /**
  * Unit test for simple App.

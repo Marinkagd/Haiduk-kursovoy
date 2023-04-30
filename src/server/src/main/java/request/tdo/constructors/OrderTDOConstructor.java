@@ -3,12 +3,12 @@ package request.tdo.constructors;
 import java.util.ArrayList;
 import java.util.List;
 
-import menu.db.dao.AccountDao;
-import menu.db.entity.Assistant;
-import menu.db.entity.OrderElement;
-import menu.db.entity.ServicedOrder;
-import menu.db.entity.ServicedOrderElement;
-import menu.db.entity.UserOrder;
+import db.dao.AccountDao;
+import db.entity.Assistant;
+import db.entity.OrderElement;
+import db.entity.ServicedOrder;
+import db.entity.ServicedOrderElement;
+import db.entity.UserOrder;
 import request.tdo.OrderElementTDO;
 import request.tdo.ServicedOrderElementTDO;
 import request.tdo.ServicedOrderTDO;

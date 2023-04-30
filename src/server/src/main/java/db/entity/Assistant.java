@@ -1,39 +1,44 @@
 package db.entity;
 
-import jakarta.persistence.*;
-import request.tdo.AssistantTDO;
-
 import java.util.List;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import request.tdo.AssistantTDO;
 
 @Entity
 @Table(name = "assistant")
-public class Assistant {
+public class Assistant{
     @Id
     @Column(name = "id", nullable = false, unique = true)
     private String id;
 
     @Column(name = "password", nullable = false)
-    private byte[] password;
+    private byte[]  password;
 
     @Column(name = "firstname", nullable = false, length = 100)
     private String firstname;
 
     @Column(name = "secondname", nullable = false, length = 100)
     private String secondname;
-
+    
     @OneToMany(mappedBy = "assistant")
     private List<ServicedOrder> servicedorderlist;
 
     public Assistant() {
     }
 
-    public Assistant(byte[] password, String firstname, String secondname) {
+    public Assistant(byte[]  password, String firstname, String secondname) {
         this.password = password;
         this.firstname = firstname;
         this.secondname = secondname;
     }
 
-    public Assistant(AssistantTDO assistanttdo) {
+    public Assistant(AssistantTDO assistanttdo)
+    {
         this.id = assistanttdo.getId();
         this.password = assistanttdo.getPassword();
         this.firstname = assistanttdo.getFirstname();
@@ -49,11 +54,11 @@ public class Assistant {
         this.id = id;
     }
 
-    public byte[] getPassword() {
+    public byte[]  getPassword() {
         return password;
     }
 
-    public void setPassword(byte[] password) {
+    public void setPassword(byte[]  password) {
         this.password = password;
     }
 
@@ -72,7 +77,7 @@ public class Assistant {
     public void setSecondname(String secondname) {
         this.secondname = secondname;
     }
-
+    
     public List<ServicedOrder> getServicedorderlist() {
         return servicedorderlist;
     }

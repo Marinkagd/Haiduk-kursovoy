@@ -1,19 +1,21 @@
 package db.dao;
 
-import db.entity.ServicedOrder;
-import jakarta.persistence.criteria.Predicate;
-import org.hibernate.Session;
-
 import java.sql.Date;
 import java.util.List;
 
-public class ServicedOrderDao extends GenericDao<ServicedOrder> {
+import org.hibernate.Session;
+
+import db.entity.ServicedOrder;
+import jakarta.persistence.criteria.Predicate;
+
+public class ServicedOrderDao extends GenericDao<ServicedOrder>{
 
     public ServicedOrderDao(Class<ServicedOrder> entityType) {
         super(entityType);
     }
 
-    public List<ServicedOrder> getProfitServicedOrderList() {
+    public List<ServicedOrder> getProfitServicedOrderList()
+    {
         List<ServicedOrder> profitOrderList = null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
@@ -26,11 +28,12 @@ public class ServicedOrderDao extends GenericDao<ServicedOrder> {
             return profitOrderList;
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
         return profitOrderList;
     }
-
-    public List<ServicedOrder> getProfitServicedOrderListPerPeriod(Date lowBorder, Date highBorder) {
+    
+    public List<ServicedOrder> getProfitServicedOrderListPerPeriod(Date lowBorder, Date highBorder)
+    {
         List<ServicedOrder> profitOrderList = null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
@@ -45,7 +48,7 @@ public class ServicedOrderDao extends GenericDao<ServicedOrder> {
             return profitOrderList;
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
         return profitOrderList;
     }
 }

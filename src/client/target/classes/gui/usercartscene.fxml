@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserCartSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserCartSceneController">
    <children>
-      <AnchorPane fx:id="furnitureFullDescription" layoutX="460.0" layoutY="39.0" prefHeight="499.0" prefWidth="493.0">
+      <AnchorPane fx:id="furnitureFullDescription" layoutX="460.0" layoutY="39.0" prefHeight="499.0" prefWidth="493.0" style="-fx-background-color: #FFE4E1;">
          <children>
             <VBox layoutX="47.0" layoutY="40.0" prefHeight="346.0" prefWidth="413.0" spacing="15.0">
                <children>
@@ -95,8 +95,14 @@
                   <TextArea fx:id="furnitureDescriptionArea" editable="false" focusTraversable="false" prefHeight="116.0" prefWidth="483.0" promptText="Описание отсутствует" />
                </children>
             </VBox>
-            <Button layoutX="51.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteFromCart" text="Удалить из корзины" />
-            <Button layoutX="325.0" layoutY="414.0" mnemonicParsing="false" onAction="#changeCartElementAmount" text="Изменить количество" />
+            <Button layoutX="51.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteFromCart" style="-fx-background-color: #BC8F8F;" text="Удалить из корзины" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button layoutX="301.0" layoutY="415.0" mnemonicParsing="false" onAction="#changeCartElementAmount" style="-fx-background-color: #BC8F8F;" text="Изменить количество" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
             <TextField fx:id="fieldAmountToChange" layoutX="393.0" layoutY="385.0" prefHeight="26.0" prefWidth="65.0" />
             <Text fx:id="amountCheckWarning" fill="RED" layoutX="319.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество верно!" visible="false" />
          </children>
@@ -115,9 +121,19 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="16.0" layoutY="457.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefWidth="83.0" text="Назад" />
-      <Button layoutX="363.0" layoutY="456.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="26.0" prefWidth="116.0" text="Оформить заказ" />
+      <Button layoutX="27.0" layoutY="454.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefWidth="83.0" style="-fx-background-color: #BC8F8F;" text="&lt;-Назад" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="185.0" layoutY="454.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="30.0" prefWidth="136.0" style="-fx-background-color: #BC8F8F;" text="Оформить заказ" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <Text fx:id="cartelementlistEmptyWarning" fill="RED" layoutX="381.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корзина пуста!" visible="false" />
-      <Button layoutX="228.0" layoutY="456.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="26.0" prefWidth="116.0" text="Очистить корзину" />
+      <Button layoutX="330.0" layoutY="454.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #BC8F8F;" text="Очистить корзину" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

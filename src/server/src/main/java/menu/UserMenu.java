@@ -4,7 +4,7 @@ import controllers.CartController;
 import controllers.FurnitureController;
 import controllers.UserController;
 import controllers.OrderController;
-import menu.db.entity.User;
+import db.entity.User;
 import request.commands.UserCommands;
 import request.controller.BaseRequestController;
 

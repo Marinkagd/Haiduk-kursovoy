@@ -1,9 +1,15 @@
 package db.entity;
 
-import jakarta.persistence.*;
-import request.tdo.UserTDO;
-
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import request.tdo.UserTDO;
 
 @Table
 @Entity(name = "user")
@@ -40,11 +46,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ServicedOrder> servicedorderlist;
 
-    public User() {
-    }
+    public User(){}
 
     public User(byte[] password, String firstname, String secondname, String phonenumber, String email,
-                String address) {
+            String address) {
         this.password = password;
         this.firstname = firstname;
         this.secondname = secondname;
@@ -53,11 +58,13 @@ public class User {
         this.address = address;
     }
 
-    public User(UserTDO usertdo) {
+    public User(UserTDO usertdo)
+    {
         updateInformation(usertdo);
     }
 
-    public void updateInformation(UserTDO usertdo) {
+    public void updateInformation(UserTDO usertdo)
+    {
         this.id = usertdo.getId();
         this.password = usertdo.getPassword();
         this.firstname = usertdo.getFirstname();
@@ -66,7 +73,6 @@ public class User {
         this.phonenumber = usertdo.getPhonenumber();
         this.address = usertdo.getAddress();
     }
-
     public String getId() {
         return id;
     }
@@ -122,7 +128,7 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
-
+    
     public List<CartElement> getCartelementList() {
         return cartelementlist;
     }
@@ -139,7 +145,7 @@ public class User {
         this.orderlist = orderlist;
     }
 
-
+       
     public List<ServicedOrder> getServicedorderlist() {
         return servicedorderlist;
     }

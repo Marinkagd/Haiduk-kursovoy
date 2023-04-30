@@ -12,11 +12,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.RegistrationSceneController">
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFE4E1;" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="МЕБЕЛЬНЫЙ САЛОН" textAlignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="САЛОН МЕБЕЛИ" textAlignment="CENTER">
                <font>
-                  <Font name="Yandex Sans Display Bold" size="23.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="10.0" />
@@ -35,7 +35,7 @@
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Text>
-            <TextField fx:id="login" focusTraversable="false" prefHeight="30.0" prefWidth="0.0" promptText="Имя пользоваетеля">
+            <TextField fx:id="login" focusTraversable="false" prefHeight="30.0" prefWidth="0.0" promptText="Имя пользователя">
                <VBox.margin>
                   <Insets bottom="10.0" left="370.0" right="370.0" />
                </VBox.margin>
@@ -70,7 +70,10 @@
                   <Insets bottom="10.0" left="370.0" right="370.0" />
                </VBox.margin>
             </TextField>
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#Registration" prefHeight="26.0" prefWidth="221.0" text="Зарегистрироваться" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#Registration" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #BC8F8F;" text="Зарегистрироваться" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Уже есть аккаунт?">
                <VBox.margin>
                   <Insets top="20.0" />

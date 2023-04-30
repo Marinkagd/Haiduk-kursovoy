@@ -1,6 +1,6 @@
 package request.tdo.constructors;
 
-import menu.db.entity.CartElement;
+import db.entity.CartElement;
 import request.tdo.CartElementTDO;
 
 public class CartElementTDOConstructor {

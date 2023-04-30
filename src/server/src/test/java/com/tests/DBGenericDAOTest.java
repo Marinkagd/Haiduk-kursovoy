@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import menu.db.dao.FurnitureCategoryDao;
-import menu.db.entity.FurnitureCategory;
+import db.dao.FurnitureCategoryDao;
+import db.entity.FurnitureCategory;
 
 public class DBGenericDAOTest {
 

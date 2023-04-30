@@ -1,15 +1,17 @@
 package db.dao;
 
-import jakarta.persistence.criteria.Predicate;
 import org.hibernate.Session;
 
-public class AccountDao<T> extends GenericDao<T> {
+import jakarta.persistence.criteria.Predicate;
+
+public class AccountDao<T> extends GenericDao<T>{
 
     public AccountDao(Class<T> entityType) {
         super(entityType);
     }
 
-    public T getByLoginAndPassword(String login, byte[] password) {
+    public T getByLoginAndPassword(String login, byte[] password)
+    {
         T account = null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
@@ -27,7 +29,8 @@ public class AccountDao<T> extends GenericDao<T> {
         return account;
     }
 
-    public T getByLogin(String login) {
+    public T getByLogin(String login)
+    {
         T account = null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
@@ -41,5 +44,5 @@ public class AccountDao<T> extends GenericDao<T> {
         }
         return account;
     }
-
+    
 }

@@ -2,9 +2,9 @@ package controllers;
 
 import java.util.ArrayList;
 
-import menu.db.dao.GenericDao;
-import menu.db.entity.Assistant;
-import menu.db.entity.User;
+import db.dao.GenericDao;
+import db.entity.Assistant;
+import db.entity.User;
 import request.commands.ConfirmCommands;
 import request.controller.BaseRequestController;
 import request.tdo.AssistantTDO;

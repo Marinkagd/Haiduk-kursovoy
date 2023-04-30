@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import menu.db.dao.ServicedOrderDao;
-import menu.db.entity.ServicedOrder;
+import db.dao.ServicedOrderDao;
+import db.entity.ServicedOrder;
 
 public class ProfitService {
 
@@ -16,10 +16,10 @@ public class ProfitService {
         float totalProfit = 0.0f;
         float income = 0.0f;
         for (ServicedOrder servicedOrder : servicedOrderList) {
-            // налог на доход - 13% 10.03.23
+            // налог на доход - 13% 03.23
             income += servicedOrder.getOrderprice() * 0.87f - servicedOrder.getOrderfirstcost();
         }
-        //налог на прибыль - 20% на 10.03.23
+        //налог на прибыль - 20% на 03.23
         totalProfit = income * 0.8f;
         return totalProfit;
     }

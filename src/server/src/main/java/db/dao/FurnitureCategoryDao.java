@@ -1,15 +1,17 @@
 package db.dao;
 
-import db.entity.FurnitureCategory;
 import org.hibernate.Session;
 
-public class FurnitureCategoryDao extends GenericDao<FurnitureCategory> {
+import db.entity.FurnitureCategory;
+
+public class FurnitureCategoryDao extends GenericDao<FurnitureCategory>{
 
     public FurnitureCategoryDao(Class<FurnitureCategory> entityType) {
         super(entityType);
     }
 
-    public FurnitureCategory getFurnitureCategoryByName(String name) {
+    public FurnitureCategory getFurnitureCategoryByName(String name)
+    {
         FurnitureCategory category = null;
         try (Session session = sessionFactory.openSession();) {
             cBuilder = session.getCriteriaBuilder();
@@ -22,7 +24,7 @@ public class FurnitureCategoryDao extends GenericDao<FurnitureCategory> {
             return category;
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
         return category;
     }
 }

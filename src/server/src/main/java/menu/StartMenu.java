@@ -6,9 +6,9 @@ import java.io.OutputStream;
 
 import controllers.AuthorisationController;
 import controllers.RegistrationController;
-import menu.db.entity.Admin;
-import menu.db.entity.Assistant;
-import menu.db.entity.User;
+import db.entity.Admin;
+import db.entity.Assistant;
+import db.entity.User;
 
 import request.commands.StartMenuCommands;
 
@@ -81,7 +81,7 @@ public class StartMenu extends Menu{
                     }
                 }
                    
-                default -> System.out.println("Такого не существует");
+                default -> System.out.println("Такого нет");
             }
             
         }

@@ -2,11 +2,11 @@ package controllers;
 
 import java.util.ArrayList;
 
-import menu.db.dao.GenericDao;
-import menu.db.dao.UserRefersDao;
-import menu.db.entity.CartElement;
-import menu.db.entity.Furniture;
-import menu.db.entity.User;
+import db.dao.GenericDao;
+import db.dao.UserRefersDao;
+import db.entity.CartElement;
+import db.entity.Furniture;
+import db.entity.User;
 import request.commands.ConfirmCommands;
 import request.controller.BaseRequestController;
 import request.tdo.CartElementTDO;

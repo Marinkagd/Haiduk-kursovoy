@@ -56,7 +56,7 @@ public class AdminFinanceSceneController {
     private void FillChoiceBoxes()
     {
         var yearList = new ArrayList<Integer>();
-        for(int i = 1990; i < 2023; i++)
+        for(int i = 1990; i < 2024; i++)
             yearList.add(i);
         var monthList = new ArrayList<Integer>();
         for(int i = 1; i < 13; i++)

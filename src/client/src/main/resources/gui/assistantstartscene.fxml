@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AssistantStartSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AssistantStartSceneController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="30.0" layoutY="15.0" prefHeight="49.0" prefWidth="191.0">
          <children>
@@ -50,13 +50,28 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button fx:id="acceptOrderButton" layoutX="296.0" layoutY="450.0" mnemonicParsing="false" onAction="#acceptOrder" prefHeight="26.0" prefWidth="143.0" text="Подтвердить заказ" />
-            <Button layoutX="101.0" layoutY="450.0" mnemonicParsing="false" onAction="#defeatOrder" prefHeight="26.0" prefWidth="143.0" text="Отклонить заказ" />
-            <TextArea fx:id="orderAnswerArea" layoutX="68.0" layoutY="371.0" prefHeight="69.0" prefWidth="404.0" promptText="Сообщение к заказу" />
+            <Button fx:id="acceptOrderButton" layoutX="90.0" layoutY="451.0" mnemonicParsing="false" onAction="#acceptOrder" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: #BC8F8F;" text="Подтвердить заказ" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button layoutX="305.0" layoutY="451.0" mnemonicParsing="false" onAction="#defeatOrder" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: #BC8F8F;" text="Отклонить заказ" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <TextArea fx:id="orderAnswerArea" layoutX="68.0" layoutY="371.0" prefHeight="69.0" prefWidth="404.0" promptText="Комментарий к заказу" />
          </children>
       </AnchorPane>
-      <Button layoutX="68.0" layoutY="457.0" mnemonicParsing="false" onAction="#exitToStartScene" prefHeight="26.0" prefWidth="67.0" text="Выйти" />
-      <Button layoutX="170.0" layoutY="458.0" mnemonicParsing="false" onAction="#exitToFurnitureScene" text="Склад товаров" />
-      <Button layoutX="295.0" layoutY="458.0" mnemonicParsing="false" onAction="#RefreshOrderTable" text="Обновить заказы" />
+      <Button layoutX="69.0" layoutY="474.0" mnemonicParsing="false" onAction="#exitToStartScene" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #BC8F8F;" text="Выйти" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="300.0" layoutY="397.0" mnemonicParsing="false" onAction="#exitToFurnitureScene" style="-fx-background-color: #BC8F8F;" text="Склад товаров" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="84.0" layoutY="396.0" mnemonicParsing="false" onAction="#RefreshOrderTable" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #BC8F8F;" text="Обновить заказы" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

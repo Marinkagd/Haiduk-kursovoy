@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserInformationSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.UserInformationSceneController">
    <children>
       <Text layoutX="384.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Персональные данные">
          <font>
@@ -73,12 +72,12 @@
                   <Insets bottom="10.0" left="60.0" />
                </VBox.margin>
             </Text>
-            <Button mnemonicParsing="false" onAction="#changePersonalData" prefHeight="26.0" prefWidth="119.0" text="Изменить данные">
+            <Button mnemonicParsing="false" onAction="#changePersonalData" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #BC8F8F;" text="Изменить данные" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="10.0" left="50.0" />
                </VBox.margin>
             </Button>
-            <Button layoutX="60.0" layoutY="312.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefHeight="26.0" prefWidth="119.0" text="Назад">
+            <Button layoutX="60.0" layoutY="312.0" mnemonicParsing="false" onAction="#exitToUserStartScene" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #BC8F8F;" text="Назад" textFill="WHITE">
                <VBox.margin>
                   <Insets left="50.0" />
                </VBox.margin>

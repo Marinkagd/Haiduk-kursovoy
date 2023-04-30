@@ -42,7 +42,7 @@ public class StartSceneController {
             if(userinformation != null)
             {
                 UserInformationSceneController.setUserinformation(userinformation);
-                System.out.println("заходим как юзер");
+                System.out.println("заходим как пользователь");
                 GUI.setRoot("userstartscene");
             }
         }
@@ -75,7 +75,7 @@ public class StartSceneController {
         account = AuthorisationController.authorisation(accountType, login.getText().strip(), password.getText());
         if(account == null)
         {
-            warningText.setText("Аккаунта не существует или проверьте правильность ввода данных!");
+            warningText.setText("Аккаунта не существует или проверьте правильность введённых данных!");
             warningText.setVisible(true);
         }
         return account;

@@ -118,7 +118,7 @@ public class UserStartSceneController {
         (!filterWarrantyFrom.getText().isBlank() && filterWarrantyTo.getText().isBlank()
         || filterWarrantyFrom.getText().isBlank() && !filterWarrantyTo.getText().isBlank()))
         {
-            filterWarning.setText("Неверные фильры!");
+            filterWarning.setText("Неверные фильтры!");
             filterWarning.setVisible(true);
             return;
         }
@@ -131,7 +131,7 @@ public class UserStartSceneController {
                     throw new NumberFormatException();
                 FurnitureController.setPriceFilter(priceFrom, priceTo);
             } catch (NumberFormatException  e) {
-                filterWarning.setText("Неверные фильры!");
+                filterWarning.setText("Неверные фильтры!");
                 filterWarning.setVisible(true);
                 return;
             }
@@ -147,7 +147,7 @@ public class UserStartSceneController {
                     throw new NumberFormatException();
                 FurnitureController.setWarrantyFilter(warrantyFrom, warrantyTo);
             } catch (NumberFormatException  e) {
-                filterWarning.setText("Неверные фильры!");
+                filterWarning.setText("Неверные фильтры!");
                 filterWarning.setVisible(true);
                 return;
             }

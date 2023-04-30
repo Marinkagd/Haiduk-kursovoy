@@ -128,7 +128,7 @@ public class UserCartSceneController {
         cartelementsTable.getItems().forEach(cartElementList::add);
         
         OrderController.createOrder(cartElementList);
-        cartelementlistEmptyWarning.setText("Заказ успешен!");
+        cartelementlistEmptyWarning.setText("Заказ сделан!");
         cartelementlistEmptyWarning.setVisible(true);
     }
 

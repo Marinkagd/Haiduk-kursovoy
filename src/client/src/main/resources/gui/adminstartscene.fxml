@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminStartSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminStartSceneController">
    <children>
       <Text layoutX="220.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пользователи">
          <font>
@@ -32,7 +31,7 @@
           <TableColumn fx:id="userLoginColumn" prefWidth="75.0" text="Логин" />
           <TableColumn fx:id="userFirstnameColumn" prefWidth="75.0" text="Имя" />
             <TableColumn fx:id="userSecondnameColumn" prefWidth="75.0" text="Фамилия" />
-            <TableColumn fx:id="userPhonenumberColumn" prefWidth="75.0" text="Номер телефона" />
+            <TableColumn fx:id="userPhonenumberColumn" prefWidth="75.0" text="Телефон" />
             <TableColumn fx:id="userEmailColumn" prefWidth="75.0" text="Почта" />
             <TableColumn fx:id="userAddressColumn" prefWidth="75.0" text="Адрес" />
         </columns>
@@ -50,24 +49,45 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <AnchorPane layoutX="504.0" layoutY="408.0" prefHeight="122.0" prefWidth="426.0">
+      <AnchorPane layoutX="504.0" layoutY="412.0" prefHeight="122.0" prefWidth="426.0">
          <children>
-            <TextField fx:id="assistantSecondnameField" layoutX="170.0" layoutY="70.0" />
-            <TextField fx:id="assistantFirstnameField" layoutX="170.0" layoutY="20.0" />
-            <TextField fx:id="assistantLoginField" layoutX="10.0" layoutY="20.0" />
-            <Text layoutX="10.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин:" />
-            <Text layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль:" />
-            <Text layoutX="172.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя:" />
-            <Text layoutX="172.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия:" />
-            <Button layoutX="331.0" layoutY="40.0" mnemonicParsing="false" onAction="#addAssistant" prefHeight="26.0" prefWidth="87.0" text="Добавить" />
-            <PasswordField fx:id="assistantPasswordField" layoutX="10.0" layoutY="70.0" />
+            <TextField fx:id="assistantSecondnameField" layoutX="170.0" layoutY="20.0" />
+            <TextField fx:id="assistantFirstnameField" layoutX="10.0" layoutY="20.0" />
+            <Text layoutX="170.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль:" />
+            <Text layoutX="10.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя:" />
+            <Text layoutX="170.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия:" />
+            <Button layoutX="331.0" layoutY="40.0" mnemonicParsing="false" onAction="#addAssistant" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #BC8F8F;" text="Добавить" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <PasswordField fx:id="assistantPasswordField" layoutX="170.0" layoutY="69.0" />
+            <TextField fx:id="assistantLoginField" layoutX="10.0" layoutY="69.0" />
+            <Text layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин:" />
          </children>
       </AnchorPane>
-      <Button fx:id="userDeleteButton" layoutX="369.0" layoutY="377.0" mnemonicParsing="false" onAction="#deleteUser" text="Удалить пользователя" />
-      <Button fx:id="assistantDeleteButton" layoutX="818.0" layoutY="376.0" mnemonicParsing="false" onAction="#deleteAssistant" text="Удалить менеджера" />
-      <Button layoutX="36.0" layoutY="460.0" mnemonicParsing="false" onAction="#exitToStartScene" prefHeight="26.0" prefWidth="60.0" text="Выйти" />
-      <Button layoutX="192.0" layoutY="458.0" mnemonicParsing="false" onAction="#exitToAdminFinanceScene" prefHeight="26.0" prefWidth="127.0" text="Финансы" />
-      <Button layoutX="233.0" layoutY="378.0" mnemonicParsing="false" onAction="#refreshUserTable" text="Обновить" />
-      <Button layoutX="698.0" layoutY="375.0" mnemonicParsing="false" onAction="#refreshAssistantTable" text="Обновить" />
+      <Button fx:id="userDeleteButton" layoutX="342.0" layoutY="376.0" mnemonicParsing="false" onAction="#deleteUser" style="-fx-background-color: #BC8F8F;" text="Удалить пользователя" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="assistantDeleteButton" layoutX="797.0" layoutY="375.0" mnemonicParsing="false" onAction="#deleteAssistant" style="-fx-background-color: #BC8F8F;" text="Удалить менеджера" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="36.0" layoutY="460.0" mnemonicParsing="false" onAction="#exitToStartScene" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #BC8F8F;" text="Выйти" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="197.0" layoutY="460.0" mnemonicParsing="false" onAction="#exitToAdminFinanceScene" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #BC8F8F;" text="Финансы" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="37.0" layoutY="376.0" mnemonicParsing="false" onAction="#refreshUserTable" style="-fx-background-color: #BC8F8F;" text="Обновить таблицу" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="515.0" layoutY="375.0" mnemonicParsing="false" onAction="#refreshAssistantTable" style="-fx-background-color: #BC8F8F;" text="Обновить таблицу" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

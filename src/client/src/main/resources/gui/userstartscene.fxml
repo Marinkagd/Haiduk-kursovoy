@@ -18,24 +18,36 @@
    <top>
       <HBox BorderPane.alignment="CENTER">
          <children>
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToUserInformation" prefWidth="240.0" text="Аккаунт" />
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToOrderScene" prefWidth="249.0" text="Заказы" />
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToCartScene" prefWidth="240.0" text="Корзина" />
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToStartScene" prefWidth="240.0" text="Выйти" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToUserInformation" prefWidth="240.0" style="-fx-background-color: #F08080;" text="Аккаунт" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToOrderScene" prefWidth="249.0" style="-fx-background-color: #BC8F8F;" text="Заказы" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToCartScene" prefWidth="240.0" style="-fx-background-color: #F08080;" text="Корзина" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#exitToStartScene" prefWidth="240.0" style="-fx-background-color: #BC8F8F;" text="Выйти" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
          </children>
       </HBox>
    </top>
    <left>
       <HBox prefHeight="514.0" prefWidth="522.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="508.0" prefWidth="153.0" spacing="5.0">
+            <VBox alignment="CENTER" prefHeight="508.0" prefWidth="153.0" spacing="5.0" style="-fx-background-color: #FFE4E1;">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Фильрация">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Фильтрация">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                      <font>
-                        <Font name="System Bold" size="12.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
                   <Text fx:id="filterWarning" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Предупреждение" visible="false" />
@@ -60,7 +72,7 @@
                      </VBox.margin>
                   </HBox>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Категория" />
-                  <ChoiceBox fx:id="filterCategory" focusTraversable="false" prefHeight="26.0" prefWidth="140.0">
+                  <ChoiceBox fx:id="filterCategory" focusTraversable="false" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: #BC8F8F;">
                      <VBox.margin>
                         <Insets bottom="15.0" />
                      </VBox.margin>
@@ -75,15 +87,21 @@
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </HBox>
-                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#applyFilters" prefWidth="140.0" text="Применить">
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#applyFilters" prefWidth="140.0" style="-fx-background-color: #BC8F8F;" text="Применить" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Button>
-                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#freeFilters" prefWidth="140.0" text="Сбросить">
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#freeFilters" prefWidth="140.0" style="-fx-background-color: #BC8F8F;" text="Сбросить" textFill="WHITE">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Button>
                </children>
             </VBox>
@@ -109,7 +127,7 @@
       </HBox>
    </left>
    <right>
-      <AnchorPane fx:id="furnitureFullDescription" prefHeight="514.0" prefWidth="468.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="furnitureFullDescription" prefHeight="514.0" prefWidth="468.0" style="-fx-background-color: #FFE4E1;" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="143.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Подробная информация:">
                <font>
@@ -182,7 +200,10 @@
                   <TextArea fx:id="furnitureDescriptionArea" editable="false" focusTraversable="false" prefHeight="116.0" prefWidth="400.0" promptText="Описание отсутствует" />
                </children>
             </VBox>
-            <Button layoutX="161.0" layoutY="437.0" mnemonicParsing="false" onAction="#addCartElement" text="Добавить в корзину" />
+            <Button layoutX="161.0" layoutY="437.0" mnemonicParsing="false" onAction="#addCartElement" style="-fx-background-color: #BC8F8F;" text="Добавить в корзину" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
             <Text fx:id="alreadyInCart" fill="#056902" layoutX="166.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Товар уже в корзине!" visible="false" wrappingWidth="160.53675079345703" />
          </children>
          <BorderPane.margin>
